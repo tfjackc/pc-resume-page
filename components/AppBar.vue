@@ -6,7 +6,7 @@
 
     <v-tabs
         v-model="tab"
-        color="success"
+        color="#1e859a"
         align-tabs="center"
     >
       <v-tab :value="1">About</v-tab>
@@ -20,13 +20,12 @@
   </v-app-bar>
 </template>
 <script lang="ts" setup>
+import { storeToRefs } from "pinia";
 import { useDataStore} from "~/store/data_store";
 const dataStore = useDataStore();
-const { tab, drawer } = storeToRefs(dataStore);
-import { useTheme } from 'vuetify'
-const theme = useTheme()
+const { tab, drawer, src_url } = storeToRefs(dataStore);
 
-function toggleTheme () {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-}
+
+
+
 </script>

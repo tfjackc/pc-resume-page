@@ -2,7 +2,7 @@
   <v-window v-model="tab">
     <v-window-item
         :value="1">
-
+        <Home />
     </v-window-item>
     <v-window-item
         :value="2">
@@ -16,6 +16,7 @@
 </template>
 
 <script setup lang="ts">
+import Home from "~/components/Home.vue"
 import BusinessCard from "~/components/BusinessCard.vue";
 import { useDataStore } from "~/store/data_store";
 const dataStore = useDataStore();
