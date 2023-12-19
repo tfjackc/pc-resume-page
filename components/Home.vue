@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <v-card elevation="10">
     <v-row>
       <v-col class="d-flex justify-center">
         <div class="ma-4">
@@ -10,11 +11,12 @@
         </div>
       </v-col>
       <v-col class="about-div ma-6">
-        <h1>About ...</h1>
-        <h3>Reservoir Engineer w/ Skills etc...</h3>
-        <p>Blurb paragraph...</p>
+        <h1>Tulsa, Oklahoma, United States</h1>
+        <h3><i>10+ Years of Industry Experience</i></h3>
+        <p>Graduated in the fall of 2013 from The University of Tulsa with a bachelor’s degree in Petroleum Engineering. Paige is intimately familiar with the complexities of the oil and gas industry, being raised in a family that has owned, drilled, completed and operated wells the industry for three generations.</p>
       </v-col>
     </v-row>
+    </v-card>
   </v-container>
 </template>
 
