@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
       '@pinia/nuxt',
-      'vuetify-nuxt-module'
+      'vuetify-nuxt-module',
+      '@nuxt/image'
   ],
     css: ['~/assets/css/main.css'],
     vuetify: {
@@ -23,6 +24,5 @@ export default defineNuxtConfig({
                 defaultSet: 'mdi',
             }
         }
-    }
+    },
 });
-
