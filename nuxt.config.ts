@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   modules: [
       '@pinia/nuxt',
       'vuetify-nuxt-module',
-      '@nuxt/image'
+      '@nuxt/image',
+      '@vue-email/nuxt'
   ],
     css: ['~/assets/css/main.css'],
     vuetify: {
