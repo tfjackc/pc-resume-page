@@ -3,12 +3,23 @@
     <v-card elevation="10">
     <v-row>
       <v-col class="d-flex justify-center pt-10" cols="12">
+        <div class="ma-6 mt-0 pt-0">
+          <div v-if="isLoading">
+            <v-progress-circular
+                :size="70"
+                :width="7"
+                color="purple"
+                indeterminate
+            ></v-progress-circular>
+          </div>
+        </div>
           <NuxtImg
-              quality="25"
+              quality="80"
               :src="`/paigevoegeli_logo_blacktext.png`"
               :lazy-src="`/paigevoegeli_logo_blacktext.png`"
               cover
               sizes="100vw sm:80vw md:600px lg:700px xl:800px"
+              @load="isLoading = false"
           >
 <!--            <template v-slot:placeholder>-->
 <!--              <v-row-->

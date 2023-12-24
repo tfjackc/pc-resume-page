@@ -24,8 +24,5 @@ export default defineNuxtConfig({
                 defaultSet: 'mdi',
             }
         }
-    },
-    image: {
-        domains: ['paigevoegeli.com', 'localhost'],
     }
 });
