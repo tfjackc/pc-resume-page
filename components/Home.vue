@@ -4,28 +4,19 @@
     <v-row>
       <v-col class="d-flex justify-center" cols="12">
         <div>
+          <v-progress-circular
+              v-if="isLoading"
+              indeterminate
+              color="grey-lighten-5"
+          ></v-progress-circular>
           <NuxtImg
-              preload
+              v-else
               format="webp"
               src="/paigevoegeli_logo_blacktext.png"
-              lazy-src="/paigevoegeli_logo_blacktext.png"
-              quality="85"
-              cover
               sizes="100vw sm:80vw md:600px lg:700px xl:800px"
-          >
-            <template v-slot:placeholder>
-              <v-row
-                  class="fill-height ma-0"
-                  align="center"
-                  justify="center"
-              >
-                <v-progress-circular
-                    indeterminate
-                    color="grey-lighten-5"
-                ></v-progress-circular>
-              </v-row>
-            </template>
-            </NuxtImg>
+              @loadstart="isLoading = true"
+              @load="isLoading = false"
+          />
         </div>
       </v-col>
       <v-col class="about-div pa-10 mb-10 d-flex flex-column align-center justify-center" cols="12">
@@ -39,9 +30,9 @@
 </template>
 
 <script setup lang="ts">
-// import { storeToRefs } from "pinia";
-// import { useDataStore} from "~/store/data_store";
-// const dataStore = useDataStore();
+import { ref } from 'vue';
+
+const isLoading = ref(false);
 </script>
 
 <style scoped>
