@@ -14,8 +14,9 @@
     <v-col class="d-flex justify-center">
         <div class="ma-6 mt-0 pt-0">
           <NuxtImg
-              quality="50"
-              src="/frame.png"
+              quality="25"
+              :src="`/frame.png`"
+              :lazy-src="`/frame.png`"
               sizes="100vw sm:80vw md:400px"
           />
         </div>

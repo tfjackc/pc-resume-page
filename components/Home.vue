@@ -4,23 +4,24 @@
     <v-row>
       <v-col class="d-flex justify-center pt-10" cols="12">
           <NuxtImg
+              quality="25"
               :src="`/paigevoegeli_logo_blacktext.png`"
               :lazy-src="`/paigevoegeli_logo_blacktext.png`"
               cover
               sizes="100vw sm:80vw md:600px lg:700px xl:800px"
           >
-            <template v-slot:placeholder>
-              <v-row
-                  class="fill-height ma-0"
-                  align="center"
-                  justify="center"
-              >
-                <v-progress-circular
-                    indeterminate
-                    color="grey-lighten-5"
-                ></v-progress-circular>
-              </v-row>
-            </template>
+<!--            <template v-slot:placeholder>-->
+<!--              <v-row-->
+<!--                  class="fill-height ma-0"-->
+<!--                  align="center"-->
+<!--                  justify="center"-->
+<!--              >-->
+<!--                <v-progress-circular-->
+<!--                    indeterminate-->
+<!--                    color="grey-lighten-5"-->
+<!--                ></v-progress-circular>-->
+<!--              </v-row>-->
+<!--            </template>-->
           </NuxtImg>
       </v-col>
       <v-col class="about-div pb-10 pl-10 pr-10 mb-10 d-flex flex-column align-center justify-center" cols="12">
