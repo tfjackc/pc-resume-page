@@ -8,17 +8,23 @@
               preload
               format="webp"
               src="/paigevoegeli_logo_blacktext.png"
+              lazy-src="/paigevoegeli_logo_blacktext.png"
               quality="85"
+              cover
               sizes="100vw sm:80vw md:600px lg:700px xl:800px"
           >
-          <template v-slot:placeholder>
-            <div class="d-flex align-center justify-center fill-height">
-              <v-progress-circular
-                  color="grey-lighten-4"
-                  indeterminate
-              ></v-progress-circular>
-            </div>
-          </template>
+            <template v-slot:placeholder>
+              <v-row
+                  class="fill-height ma-0"
+                  align="center"
+                  justify="center"
+              >
+                <v-progress-circular
+                    indeterminate
+                    color="grey-lighten-5"
+                ></v-progress-circular>
+              </v-row>
+            </template>
             </NuxtImg>
         </div>
       </v-col>
