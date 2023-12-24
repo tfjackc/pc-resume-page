@@ -1,6 +1,4 @@
-<script setup lang="ts">
 
-</script>
 
 <template>
 <v-container>
@@ -13,11 +11,19 @@
     <v-row>
     <v-col class="d-flex justify-center">
         <div class="ma-6 mt-0 pt-0">
+          <v-progress-circular
+              v-if="isLoading"
+              :size="70"
+              :width="7"
+              color="purple"
+              indeterminate
+          ></v-progress-circular>
           <NuxtImg
               quality="80"
               :src="`/frame.png`"
               :lazy-src="`/frame.png`"
               sizes="100vw sm:80vw md:400px"
+              @load="handleImageLoad"
           />
         </div>
     </v-col>
@@ -25,6 +31,14 @@
   </v-card>
 </v-container>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+const isLoading = ref(true);
+function handleImageLoad() {
+  isLoading.value = false;
+}
+</script>
 
 <style scoped>
 

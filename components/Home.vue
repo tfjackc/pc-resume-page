@@ -3,16 +3,21 @@
     <v-card elevation="10">
     <v-row>
       <v-col class="d-flex justify-center pt-10" cols="12">
-        <div class="ma-6 mt-0 pt-0">
-          <div v-if="isLoading">
+
             <v-progress-circular
+        v-if="isLoading"
                 :size="70"
                 :width="7"
                 color="purple"
                 indeterminate
             ></v-progress-circular>
-          </div>
-        </div>
+
+<!--        <v-skeleton-loader-->
+<!--            v-if="isLoading"-->
+<!--            height="300"-->
+<!--            width="300"-->
+<!--            type="image"-->
+<!--        > </v-skeleton-loader>-->
           <NuxtImg
               quality="80"
               :src="`/paigevoegeli_logo_blacktext.png`"
@@ -34,6 +39,7 @@
 <!--              </v-row>-->
 <!--            </template>-->
           </NuxtImg>
+
       </v-col>
       <v-col class="about-div pb-10 pl-10 pr-10 mb-10 d-flex flex-column align-center justify-center" cols="12">
         <h1>Tulsa, Oklahoma, United States</h1>
@@ -47,12 +53,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-const isLoading = ref(false);
+import { ref } from 'vue';
+
+const isLoading = ref(true);
+
+const MIN_LOADING_TIME = 1000; // Minimum loading time in milliseconds
+
 function handleImageLoad() {
-  console.log(isLoading.value)
-  isLoading.value = false;
-  console.log('Image has been loaded');
+isLoading.value = false;
 }
 </script>
 
