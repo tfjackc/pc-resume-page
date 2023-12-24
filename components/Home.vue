@@ -7,7 +7,16 @@
           <NuxtImg
               src="/paigevoegeli_logo_blacktext.png"
               sizes="100vw sm:80vw md:600px lg:700px xl:800px"
-          />
+          >
+          <template v-slot:placeholder>
+            <div class="d-flex align-center justify-center fill-height">
+              <v-progress-circular
+                  color="grey-lighten-4"
+                  indeterminate
+              ></v-progress-circular>
+            </div>
+          </template>
+            </NuxtImg>
         </div>
       </v-col>
       <v-col class="about-div ma-5 pa-5 mb-10 d-flex flex-column align-center justify-center" cols="12">
