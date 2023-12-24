@@ -5,6 +5,7 @@
       <v-col class="d-flex justify-center" cols="12">
         <div>
           <NuxtImg
+              format="webp"
               src="/paigevoegeli_logo_blacktext.png"
               sizes="100vw sm:80vw md:600px lg:700px xl:800px"
           />
