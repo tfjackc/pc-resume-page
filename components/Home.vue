@@ -19,7 +19,7 @@
               :lazy-src="`/paigevoegeli_logo_blacktext.png`"
               cover
               sizes="100vw sm:80vw md:600px lg:700px xl:800px"
-              @load="isLoading = false"
+              @load="handleImageLoad"
           >
 <!--            <template v-slot:placeholder>-->
 <!--              <v-row-->
@@ -47,8 +47,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 const isLoading = ref(false);
+function handleImageLoad() {
+  console.log(isLoading.value)
+  isLoading.value = false;
+  console.log('Image has been loaded');
+}
 </script>
 
 <style scoped>
