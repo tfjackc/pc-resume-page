@@ -16,6 +16,7 @@
           <NuxtImg
               src="/frame.png"
               sizes="100vw sm:80vw md:400px"
+              :lazy="false"
           />
         </div>
     </v-col>

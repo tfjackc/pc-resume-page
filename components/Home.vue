@@ -8,7 +8,7 @@
               format="webp"
               src="/paigevoegeli_logo_blacktext.png"
               quality="85"
-              :lazy="true"
+              :lazy="false"
               sizes="100vw sm:80vw md:600px lg:700px xl:800px"
           >
           <template v-slot:placeholder>
