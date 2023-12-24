@@ -25,4 +25,7 @@ export default defineNuxtConfig({
             }
         }
     },
+    image: {
+        domains: ['paigevoegeli.com', 'localhost'],
+    }
 });
