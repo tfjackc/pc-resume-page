@@ -5,14 +5,19 @@
         width="600"
     >
       <template v-slot:activator="{ props }">
-        <v-btn v-bind="props" color="#dfc8a8" size="large" variant="elevated">Contact Me</v-btn>
+        <v-btn v-bind="props" color="#dfc8a8" size="large" variant="elevated" class="mt-5">Contact Me</v-btn>
       </template>
       <template v-slot:default="{ isActive }">
         <v-card>
           <v-toolbar
-              color="grey-lighten-5"
-              title="Contact Me"
-          ></v-toolbar>
+              color="#1f869b"
+          >
+            <v-toolbar-title class="grey-lighten-5 font-weight-bold text-h4">
+              Get In Touch
+            </v-toolbar-title>
+          </v-toolbar>
+          <v-divider></v-divider>
+
           <v-card-text class="contact-me">
             <v-form>
               <v-text-field

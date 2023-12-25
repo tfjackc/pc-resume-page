@@ -9,13 +9,13 @@
     </v-col>
   </v-row>
     <v-row>
-    <v-col class="d-flex justify-center">
+    <v-col class="qr-code d-flex justify-center">
         <div class="ma-6 mt-0 pt-0">
           <v-progress-circular
               v-if="isLoading"
               :size="70"
               :width="7"
-              color="purple"
+              color="#1f869b"
               indeterminate
           ></v-progress-circular>
           <NuxtImg

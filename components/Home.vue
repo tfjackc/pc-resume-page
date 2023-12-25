@@ -7,7 +7,7 @@
               v-if="isLoading"
               :size="70"
               :width="7"
-              color="purple"
+              color="#1f869b"
               indeterminate
           ></v-progress-circular>
           <NuxtImg
