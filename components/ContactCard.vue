@@ -1,6 +1,3 @@
-To add icons to the labels of the form fields, you can use the `prepend-icon` attribute of the `v-text-field` and `v-textarea` components. This attribute accepts the name of a Material Design Icon. Here's how you can modify your code:
-
-```vue
 <template>
   <v-col cols="auto">
     <v-dialog
@@ -20,16 +17,19 @@ To add icons to the labels of the form fields, you can use the `prepend-icon` at
             <v-form>
               <v-text-field
                   label="Name"
+                  :model-value="name"
                   required
                   prepend-icon="mdi-account"
               ></v-text-field>
               <v-text-field
                   label="Email"
+                  :model-value="email"
                   required
                   prepend-icon="mdi-email"
               ></v-text-field>
               <v-textarea
                   label="Message"
+                  :model-value="message"
                   required
                   prepend-icon="mdi-message"
               ></v-textarea>
@@ -60,21 +60,15 @@ const data_store = useDataStore();
 const { name, email, message } = storeToRefs(data_store);
 
 async function submitForm() {
-  const response = await fetch('server/email.post.ts', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    }),
-  });
-
-  if (!response.ok) {
-    console.error('Error sending email:', response.statusText);
-  }
+  console.log('submitting form');
+  // const response = await fetch('/api/send-email');
+  //
+  // if (!response.ok) {
+  //   console.error('Error sending email:', response.statusText);
+  // } else {
+  //   const responseData = await response.json();
+  //   console.log(responseData.message); // logs 'Email sent'
+  // }
 }
 </script>
 

@@ -25,5 +25,9 @@ export default defineNuxtConfig({
                 defaultSet: 'mdi',
             }
         }
+    },
+    vueEmail: {
+        baseUrl: 'https://www.pagievoegeli.com/',
+        autoImport: true,
     }
 });
